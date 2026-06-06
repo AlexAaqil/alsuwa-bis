@@ -1,26 +1,114 @@
 .BrandStrategyPage {
+    @apply py-4;
+
     .Slide {
+        @apply mb-4;
+
         .container-fluid {
-            @apply min-h-screen p-16 border border-border;
+            @apply min-h-screen p-16 border border-border rounded-lg;
 
             .header {
                 .title {
-                    @apply text-s-subheading mb-8;
+                    @apply text-s-subheading mb-8 text-accent-foreground font-semibold;
+                }
+            }
+
+            .content {
+                @apply w-[80%];
+
+                .content-title {
+                    @apply text-accent-foreground text-sm font-medium;
+
+                    &:not(:first-of-type) {
+                        @apply mt-8;
+                    }
+                }
+
+                .pills {
+                    @apply flex gap-4 list-none mt-4;
+
+                    li {
+                        @apply ml-0 border border-accent-foreground py-1 px-4 rounded-full text-sm text-accent-foreground;
+                    }
+                }
+
+                .quote {
+                    @apply grid gap-1 border-l-4 border-accent-foreground pl-4 my-8;
+
+                    .quote-content {
+                        @apply italic font-medium text-lg;
+                    }
+
+                    .source {
+                        @apply text-xs text-muted-foreground;
+                    }
+                }
+
+                .core-values {
+                    @apply list-none grid gap-4 mt-4;
+
+                    li {
+                        @apply ml-0 border border-border p-4 rounded-lg grid gap-1;
+
+                        .value {
+                            @apply font-medium text-lg;
+                        }
+
+                        .description {
+                            @apply text-sm;
+                        }
+                    }
+                }
+
+                .audience-wrapper {
+                    @apply grid grid-cols-2 gap-8 mt-8;
+
+                    .audience-card {
+                        @apply border border-border rounded-lg p-4;
+
+                        .image {
+                            @apply h-25 w-25 rounded-full flex items-center justify-center border border-border overflow-hidden mb-8;
+
+                            img {
+                                @apply object-cover h-full w-full;
+                            }
+                        }
+
+                        .content {
+                            .title {
+                                @apply font-semibold text-lg mb-2;
+                            }
+
+                            p {
+                                @apply text-sm;
+                            }
+
+                            .description,
+                            .subtitle {
+                                @apply text-accent-foreground text-xs font-medium;
+                            }
+
+                            .subtitle {
+                                @apply mt-4 uppercase;
+                            }
+                        }
+                    }
                 }
             }
         }
     }
-    
+
 
     .MainSlide {
         .container-fluid {
-            @apply flex flex-col gap-8 bg-accent text-accent-foreground;
+            @apply flex flex-col gap-8 bg-accent text-white;
 
             .header {
                 .title {
-                    @apply text-s-heading font-bold mb-8;
+                    @apply text-s-heading font-bold mb-8 uppercase tracking-wider text-white dark:text-accent-foreground;
                     line-height: 1;
                 }
+
                 .description {
                     @apply text-s-subheading;
                 }
@@ -31,6 +119,14 @@
 
                 .contact {
                     @apply text-s-caption;
+                }
+            }
+
+            .slide-number {
+                @apply mt-auto inline-grid;
+
+                .number {
+                    @apply justify-self-end text-accent-foreground text-5xl font-bold;
                 }
             }
         }

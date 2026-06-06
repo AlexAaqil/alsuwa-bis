@@ -55,7 +55,7 @@
 
     /* --accent: #5200FF; */
     --accent: #6F00FF;
-    --accent-foreground: #FAF9F5;
+    --accent-foreground: #C8973A;
     --border: hsl(0 0% 92.8%);
 }
 
@@ -66,8 +66,8 @@
     --muted-foreground: hsl(0 0% 63.9%);
 
     /* --accent: #5200FF; */
-    --accent: #6F00FF;
-    --accent-foreground: #FAF9F5;
+    --accent: #171918;
+    --accent-foreground: #C8973A;
     --border: hsl(0 0% 14.9%);
 }
 
